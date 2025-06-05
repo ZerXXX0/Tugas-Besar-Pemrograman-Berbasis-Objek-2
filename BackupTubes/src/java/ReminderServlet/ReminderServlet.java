@@ -27,7 +27,7 @@ public class ReminderServlet extends HttpServlet {
         db.connect();
         if (db.isConnected()) {
             ResultSet rs = db.getDataS("SELECT id, time, message, idTask FROM reminder ORDER BY time ASC");
-            request.setAttribute("reminderList", rs);
+            request.setAttribute("listReminder", rs);
             RequestDispatcher dispatcher = request.getRequestDispatcher("home_page.jsp");
             dispatcher.forward(request, response);
         } else {

@@ -71,7 +71,7 @@
         }
         
         .main-content {
-            margin-left: 80px;
+            margin-left: 100px;
             padding: 40px;
             min-height: 100vh;
         }
@@ -183,6 +183,37 @@
             border-radius: 10px;
         }
         
+        .journal-actions {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 8px;
+        }
+        
+        .action-btn {
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 0.9rem;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+            transition: all 0.2s;
+        }
+        
+        .action-btn:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        .edit-btn:hover {
+            color: #0d6efd;
+        }
+        
+        .delete-btn:hover {
+            color: #dc3545;
+        }
+        
         @media (max-width: 768px) {
             .journal-grid {
                 grid-template-columns: 1fr;
@@ -194,35 +225,31 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Add Button at the top -->
-        <a href="home_page.jsp?page=add" class="nav-link">
+        <a href="home_page.jsp?page=add" class="nav-link <%= request.getParameter("page") == null || request.getParameter("page").equals("home") ? "active" : "" %>">
             <img src="assets/LogoAdd.png" alt="Add" style="width: 40px; height: 40px;" class="sidebar-icon" id="add-icon">
         </a>
-        
-        <a href="home_page.jsp?page=home" class="nav-link">
+            
+        <a href="HomeServlet" class="nav-link <%= request.getParameter("page") == null || request.getParameter("page").equals("home") ? "active" : "" %>">
             <img src="assets/LogoHome.png" alt="Home" style="width: 40px; height: 40px;" class="sidebar-icon" id="home-icon">
         </a>
         
-        <a href="home_page.jsp?page=alarm" class="nav-link">
+        <a href="AlarmServlet" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("alarm") ? "active" : "" %>">
             <img src="assets/LogoAlarm.png" alt="Alarm" style="width: 40px; height: 40px;" class="sidebar-icon" id="alarm-icon">
         </a>
         
-        <a href="home_page.jsp?page=reminder" class="nav-link">
+        <a href="ReminderServlet" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("reminder") ? "active" : "" %>">
             <img src="assets/LogoNotif.png" alt="Notification" style="width: 40px; height: 40px;" class="sidebar-icon" id="notif-icon">
         </a>
         
-        <a href="NoteServlet" class="nav-link">
+        <a href="NoteServlet" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("note") ? "active" : "" %>">
             <img src="assets/LogoNotes.png" alt="Notes" style="width: 40px; height: 40px;" class="sidebar-icon" id="notes-icon">
         </a>
         
-        <a href="home_page.jsp?page=calendar" class="nav-link">
-            <img src="assets/LogoCalendar.png" alt="Calendar" style="width: 40px; height: 40px;" class="sidebar-icon" id="calendar-icon">
-        </a>
-        
-        <a href="home_page.jsp?page=todolist" class="nav-link">
+        <a href="TaskServlet" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("todolist") ? "active" : "" %>">
             <img src="assets/LogoToDoList.png" alt="To-Do" style="width: 40px; height: 40px;" class="sidebar-icon" id="todo-icon">
         </a>
         
-        <a href="home_page.jsp?page=journal" class="nav-link active">
+        <a href="JournalEntryServlet" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("journal") ? "active" : "" %>">
             <img src="assets/LogoJournal.png" alt="Journal" style="width: 40px; height: 40px;" class="sidebar-icon" id="journal-icon">
         </a>
         
@@ -231,13 +258,13 @@
         </a>
     </div>
 
+
     <!-- Main Content -->
     <div class="main-content">
         <!-- Header Section -->
         <div class="header-section">
             <div class="journal-header">
                 <h1>Journal</h1>
-                <p>Today</p>
             </div>
             
             <div class="profile-section">
@@ -259,7 +286,14 @@
         <div class="journal-grid">
             <!-- Daily Journal Card -->
             <div class="journal-card">
-                <div class="journal-card-title">Daily</div>
+                <div class="journal-card-title">Daily
+                    <button class="action-btn edit-btn">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="action-btn delete-btn">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
                 <div class="journal-content">
                     Dear diary,<br><br>
                     I finna pop some n*gga man damn. I aint gon let ts slide man, dis nigga don pop my gang man. fuck the 63rd man. damn cuz i see them hoe at 63rd i finna hit. she got dat superbass niki minaj lookin ass girl.
@@ -271,7 +305,14 @@
 
             <!-- Sleep Journal Card -->
             <div class="journal-card">
-                <div class="journal-card-title">Sleep Journal</div>
+                <div class="journal-card-title">Sleep Journal
+                <button class="action-btn edit-btn">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="action-btn delete-btn">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
                 <div class="journal-content">
                     Man i be dreamin bout my opps today, i be dreamin of poppin them off man. Dafuq ts man i wanna wet dream cuz damn.
                 </div>
@@ -282,7 +323,14 @@
 
             <!-- Drugs Journal Card -->
             <div class="journal-card">
-                <div class="journal-card-title">Drugs</div>
+                <div class="journal-card-title">Drugs
+                <button class="action-btn edit-btn">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="action-btn delete-btn">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
                 <div class="journal-content">
                     i be smokin weed, sippin lean and injectin fent today cuh dat shit hard son
                 </div>
@@ -297,7 +345,14 @@
         <div class="journal-grid">
             <!-- Daily Journal Card -->
             <div class="journal-card">
-                <div class="journal-card-title">Daily</div>
+                <div class="journal-card-title">Daily
+                <button class="action-btn edit-btn">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="action-btn delete-btn">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
                 <div class="journal-content">
                     Dear diary,<br><br>
                     I finna pop some n*gga man damn. I aint gon let ts slide man, dis nigga don pop my gang.
@@ -309,7 +364,14 @@
 
             <!-- Sleep Journal Card -->
             <div class="journal-card">
-                <div class="journal-card-title">Sleep Journal</div>
+                <div class="journal-card-title">Sleep Journal
+                <button class="action-btn edit-btn">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="action-btn delete-btn">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
                 <div class="journal-content">
                     Man i be dreamin bout my opps today, i be dreamin of poppin them off man. Dafuq ts man i wanna wet dream cuz damn.
                 </div>
@@ -357,13 +419,6 @@
         };
         document.getElementById("notes-icon").onmouseout = function() {
             this.src = "assets/LogoNotes.png";
-        };
-
-        document.getElementById("calendar-icon").onmouseover = function() {
-            this.src = "assets/CalendarHover.png";
-        };
-        document.getElementById("calendar-icon").onmouseout = function() {
-            this.src = "assets/LogoCalendar.png";
         };
 
         document.getElementById("todo-icon").onmouseover = function() {

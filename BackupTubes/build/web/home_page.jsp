@@ -266,19 +266,19 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Add Button at the top -->
-        <a href="home_page.jsp?page=add" class="nav-link <%= request.getParameter("page") == null || request.getParameter("page").equals("home") ? "active" : "" %>">
+        <a href="add.jsp" class="nav-link">
             <img src="assets/LogoAdd.png" alt="Add" style="width: 40px; height: 40px;" class="sidebar-icon" id="add-icon">
         </a>
             
-        <a href="home_page.jsp?page=home" class="nav-link <%= request.getParameter("page") == null || request.getParameter("page").equals("home") ? "active" : "" %>">
+        <a href="HomeServlet" class="nav-link <%= request.getParameter("page") == null || request.getParameter("page").equals("home") ? "active" : "" %>">
             <img src="assets/LogoHome.png" alt="Home" style="width: 40px; height: 40px;" class="sidebar-icon" id="home-icon">
         </a>
         
-        <a href="home_page.jsp?page=alarm" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("alarm") ? "active" : "" %>">
+        <a href="AlarmServlet" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("alarm") ? "active" : "" %>">
             <img src="assets/LogoAlarm.png" alt="Alarm" style="width: 40px; height: 40px;" class="sidebar-icon" id="alarm-icon">
         </a>
         
-        <a href="home_page.jsp?page=reminder" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("reminder") ? "active" : "" %>">
+        <a href="ReminderServlet" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("reminder") ? "active" : "" %>">
             <img src="assets/LogoNotif.png" alt="Notification" style="width: 40px; height: 40px;" class="sidebar-icon" id="notif-icon">
         </a>
         
@@ -286,11 +286,7 @@
             <img src="assets/LogoNotes.png" alt="Notes" style="width: 40px; height: 40px;" class="sidebar-icon" id="notes-icon">
         </a>
         
-        <a href="home_page.jsp?page=calendar" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("calendar") ? "active" : "" %>">
-            <img src="assets/LogoCalendar.png" alt="Calendar" style="width: 40px; height: 40px;" class="sidebar-icon" id="calendar-icon">
-        </a>
-        
-        <a href="home_page.jsp?page=todolist" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("todolist") ? "active" : "" %>">
+        <a href="TaskServlet" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("todolist") ? "active" : "" %>">
             <img src="assets/LogoToDoList.png" alt="To-Do" style="width: 40px; height: 40px;" class="sidebar-icon" id="todo-icon">
         </a>
         
@@ -321,13 +317,13 @@
             %>  
             <jsp:include page="alarm.jsp" flush="true"></jsp:include>
             <%
+        } else if ("reminder".equals(content)){
+            %>  
+            <jsp:include page="reminder.jsp" flush="true"></jsp:include>
+            <%
         } else if ("note".equals(content)){
             %>  
             <jsp:include page="note.jsp" flush="true"></jsp:include>
-            <%
-        } else if ("calendar".equals(content)){
-            %>  
-            <jsp:include page="calendar.jsp" flush="true"></jsp:include>
             <%
         } else if ("todolist".equals(content)){
             %>  
@@ -383,13 +379,6 @@
         };
         document.getElementById("notes-icon").onmouseout = function() {
             this.src = "assets/LogoNotes.png";
-        };
-
-        document.getElementById("calendar-icon").onmouseover = function() {
-            this.src = "assets/CalendarHover.png";
-        };
-        document.getElementById("calendar-icon").onmouseout = function() {
-            this.src = "assets/LogoCalendar.png";
         };
 
         document.getElementById("todo-icon").onmouseover = function() {

@@ -30,7 +30,7 @@
         }
         
         .main-content {
-            margin-left: 80px;
+            margin-left: 100px;
             padding: 40px;
             min-height: 100vh;
         }
@@ -65,6 +65,17 @@
             background-color: rgba(255, 255, 255, 0.3);
         }
         
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+        
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+        
         .card {
             color: black;
             background-color: rgba(255, 255, 255, 0.8);
@@ -83,6 +94,13 @@
         .notes-header {
             flex: 1;
         }
+        
+        .notes-header h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 5px;
+        }
+        
         .note-list {
             margin-top: 20px;
         }
@@ -114,7 +132,6 @@
         <div class="header-section">
             <div class="notes-header">
                 <h1>Notes</h1>
-                <p>Today</p>
             </div>
             <div class="profile-section">
                 <div class="profile-info">
@@ -135,6 +152,7 @@
         try {
             if (rs != null) {
     %>
+    <h2 class="section-title">Today</h2>
     <div class="container">
         <!-- Container untuk Text Notes -->
         <div class="card">
