@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Reminder;
 
 /**
  *
@@ -42,7 +43,7 @@ public class AddReminderServlet extends HttpServlet {
         String query = "INSERT INTO reminder (time, message, idTask) VALUES ('"
                 + reminder.getTime() + "', '"
                 + reminder.getMessage() + "', '"
-                + reminder.getIdTask() + "' )";
+                + reminder.getIdtask() + "' )";
         
         // Simpan ke database
         db.runQuery(query);

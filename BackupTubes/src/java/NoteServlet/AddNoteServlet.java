@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Note;
 
 /**
  *
@@ -35,7 +36,6 @@ public class AddNoteServlet extends HttpServlet {
         String title = request.getParameter("title");
         String textNote = request.getParameter("textNote");
         String voiceNote = request.getParameter("voiceNote");
-        
         Timestamp createdDate = request.getParameter("createdDate");
         
         // Buat object barang

@@ -6,6 +6,33 @@
             <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/config/DB.java</file>
             <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/index.jsp</file>
             <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/nbproject/build-impl.xml</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/model/ToDoItem.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/model/Activity.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/model/Task.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/model/Alarm.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/model/JournalEntry.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/model/Note.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/model/Reminder.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/model/TextNote.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/model/User.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/model/VoiceNote.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/TaskServlet/AddTaskServlet.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/NoteServlet/AddNoteServlet.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/ReminderServlet/AddReminderServlet.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/todolist.jsp</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/home_page.jsp</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/home.jsp</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/login_page.jsp</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/note.jsp</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/reminder.jsp</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/settings.jsp</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/ReminderServlet/ReminderServlet.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/src/java/NoteServlet/NoteServlet.java</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/alarm.jsp</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/add.jsp</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/editProfile.jsp</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/journal.jsp</file>
+            <file>file:/C:/In%20AI%20We%20Trust/Gojiii/Tugas-Besar-Pemrograman-Berbasis-Objek-2/BackupTubes/web/registration_page.jsp</file>
         </group>
     </open-files>
 </project-private>
